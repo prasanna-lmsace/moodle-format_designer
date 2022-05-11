@@ -42,7 +42,6 @@ class content extends content_base {
      */
     protected $hasaddsection = true;
 
-
     /**
      * Export this data so it can be used as the context for a mustache template (core/inplace_editable).
      *
@@ -53,7 +52,7 @@ class content extends content_base {
         global $PAGE;
         $data = parent::export_for_template($output);
         $data->course = $this->format->get_course();
-        
+
         return $data;
     }
 

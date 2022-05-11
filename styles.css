@@ -1373,9 +1373,6 @@ ul li {
 .format-designer .designer .section.img-text.list-layout .content .section li.activity .activityinstance .aalink {
     margin-top: 5px;
 }
-.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable .activity-instance .activitytitle .img-element {
-    display: inline-block;
-}
 .format-designer .designer .section.img-text.list-layout .activity .activityinstance .activity-element {
     width: 78%;
     display: inline-block;
@@ -1835,7 +1832,8 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     padding-right: 0;
     display: block;
 }
-.format-designer .designer .section.img-text .circle-layout .activity-block .activityinstance .activity-instance .img-element {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable .activity-instance .activitytitle .img-element,
+.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable .activity-instance .activitytitle .img-element {
     display: none;
 }
 .format-designer .designer .section.img-text .circle-layout .activity-block .activityinstance .activity-instance {
