@@ -452,6 +452,9 @@ body.format-designer.editing ul.designer .section .circles-layout .activity .edi
 .format-designer .course-content ul.designer.kanban-board li.section .section-header-content {
     border-radius: 10px;
 }
+.format-designer .course-content ul.designer li.section .section-header-content > .align-items-start {
+    display: inline-block;
+}
 .format-designer .course-content ul.designer li.section .section-header-content .sectionname {
     display: inline-block;
 }
@@ -836,7 +839,7 @@ ul li {
 .format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
 .activity-instance {
     width: 90%;
-    display: inline-flex !important;
+    display: inline-block;
 }
 .format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
 .activity-instance .activitytitle,

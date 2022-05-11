@@ -655,7 +655,7 @@ class renderer extends \core_courseformat\output\section_renderer {
         $sectionclass .= $section->widthclass;
         $sectionclass .= ($templatecontext['sectionstyle']) ?? ' '.$templatecontext['sectionstyle'];
         $sectionclass .= isset($templatecontext['onlysummary']) && $templatecontext['onlysummary'] ? ' section-summary ' : '';
-        $sectionclass .= isset($templatecontext['ishidden']) && $templatecontext['ishidden'] ? ' hidden ' : '';        
+        $sectionclass .= isset($templatecontext['ishidden']) && $templatecontext['ishidden'] ? ' hidden ' : '';
         $sectionclass .= isset($templatecontext['iscurrent']) && $templatecontext['iscurrent'] ? ' current ' : '';
         $sectionclass .= isset($templatecontext['isstealth']) && $templatecontext['isstealth'] ? ' orphaned ' : '';
 
@@ -681,7 +681,6 @@ class renderer extends \core_courseformat\output\section_renderer {
 
         return $templatecontext;
     }
-
 
     /**
      * Render the mod info.

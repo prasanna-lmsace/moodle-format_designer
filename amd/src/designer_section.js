@@ -186,12 +186,6 @@
             sectionid: dataid,
             options: [{name: $(event.currentTarget).data('option'), value: layout}]
         };
-        var ULClasses = {
-            'cards': 'card-deck card-layout',
-            'list': 'list-layout',
-            'default': 'link-layout',
-            'circles': 'circles-layout'
-        };
         var promises = Ajax.call([{
                 methodname: 'format_designer_set_section_options',
                 args: args
