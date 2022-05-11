@@ -146,6 +146,7 @@ class options_test extends \advanced_testcase {
 
     /**
      * Test section completion find the logged in user status of section.
+     * @covers \format_designer\options::is_section_completed
      */
     public function test_sectioncompletion() {
         global $DB;

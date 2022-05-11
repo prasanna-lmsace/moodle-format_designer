@@ -40,7 +40,7 @@ class content extends content_base {
      *
      * The responsible for the buttons is core_courseformat\output\local\content\section.
      */
-    protected $hasaddsection = false;
+    protected $hasaddsection = true;
 
 
     /**
@@ -53,6 +53,7 @@ class content extends content_base {
         global $PAGE;
         $data = parent::export_for_template($output);
         $data->course = $this->format->get_course();
+        
         return $data;
     }
 

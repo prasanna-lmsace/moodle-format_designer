@@ -682,6 +682,7 @@ class renderer extends \core_courseformat\output\section_renderer {
      * @param int $sectionreturn
      * @param array $displayoptions
      * @param stdclass $section section record data.
+     * @param array $cmdata Course module data.
      * @return void|string
      */
     public function render_course_module($mod, $sectionreturn, $displayoptions = [], $section=null, $cmdata=[]) {
@@ -690,13 +691,6 @@ class renderer extends \core_courseformat\output\section_renderer {
             return [];
         }
 
-        $indentclasses = 'mod-indent';
-        if (!empty($mod->indent)) {
-            $indentclasses .= ' mod-indent-'.$mod->indent;
-            if ($mod->indent > 15) {
-                $indentclasses .= ' mod-indent-huge';
-            }
-        }
         $modclasses = 'activity ' . $mod->modname . ' modtype_' . $mod->modname . ' ' . $mod->extraclasses;
 
         $cmcompletion = new cm_completion($mod);
@@ -757,7 +751,6 @@ class renderer extends \core_courseformat\output\section_renderer {
             'cm' => $mod,
             'modtype' => $mod->get_module_type_name(),
             'modclasses' => $modclasses,
-            'indentclasses' => $indentclasses,
             'colorclass' => $cmcompletion->get_color_class(),
 
             'cmcompletion' => $cmcompletion,
