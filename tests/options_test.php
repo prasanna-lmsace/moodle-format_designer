@@ -56,6 +56,7 @@ class options_test extends \advanced_testcase {
 
     /**
      * Test isjson method find the string is json or not.
+     * @covers \format_designer\options::is_json
      */
     public function test_optionisjson() {
         $elements = [
@@ -77,6 +78,7 @@ class options_test extends \advanced_testcase {
 
     /**
      * Test module elements visibility settings are added with module form. It updates the data to table.
+     * @covers ::get_activity_elementclasses
      */
     public function test_moduleelements() {
         global $DB, $PAGE;
@@ -107,6 +109,7 @@ class options_test extends \advanced_testcase {
 
     /**
      * Test ismodcompleted method process the user module completion.
+     * @covers \format_designer\options::is_mod_completed
      */
     public function test_modcompletion() {
         global $DB;

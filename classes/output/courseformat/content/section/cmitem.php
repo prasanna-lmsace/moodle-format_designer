@@ -17,31 +17,23 @@
 /**
  * Contains the default activity item from a section.
  *
- * @package   core_courseformat
- * @copyright 2020 Ferran Recio <ferran@moodle.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    format_designer
+ * @copyright  2021 bdecent gmbh <https://bdecent.de>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 namespace format_designer\output\courseformat\content\section;
 
 use cm_info;
-use core\output\named_templatable;
-use core_courseformat\base as course_format;
-use core_courseformat\output\local\courseformat_named_templatable;
-use renderable;
 use renderer_base;
-use section_info;
 use stdClass;
-use html_writer;
-use format_designer\output\cm_completion as cm_completion;
-use format_designer\output\call_to_action as call_to_action;
 
 /**
  * Base class to render a section activity in the activities list.
  *
- * @package   core_courseformat
- * @copyright 2020 Ferran Recio <ferran@moodle.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    format_designer
+ * @copyright  2021 bdecent gmbh <https://bdecent.de>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class cmitem extends \core_courseformat\output\local\content\section\cmitem {
 
