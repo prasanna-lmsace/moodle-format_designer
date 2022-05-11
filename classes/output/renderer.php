@@ -654,7 +654,13 @@ class renderer extends \core_courseformat\output\section_renderer {
         $sectionclass .= ($sectionrestrict) ? 'restricted' : '';
         $sectionclass .= $section->widthclass;
         $sectionclass .= ($templatecontext['sectionstyle']) ?? ' '.$templatecontext['sectionstyle'];
+        $sectionclass .= isset($templatecontext['onlysummary']) && $templatecontext['onlysummary'] ? ' section-summary ' : '';
+        $sectionclass .= isset($templatecontext['ishidden']) && $templatecontext['ishidden'] ? ' hidden ' : '';        
+        $sectionclass .= isset($templatecontext['iscurrent']) && $templatecontext['iscurrent'] ? ' current ' : '';
+        $sectionclass .= isset($templatecontext['isstealth']) && $templatecontext['isstealth'] ? ' orphaned ' : '';
+
         $style = isset($templatecontext['prosectionstyle']) ? ' '.$templatecontext['prosectionstyle'] : '';
+
         $templatecontext['sectionhead'] = html_writer::start_tag('li', [
             'id' => 'section-'.$section->section,
             'class' => 'section main clearfix'.$sectionclass,
@@ -663,6 +669,8 @@ class renderer extends \core_courseformat\output\section_renderer {
             'data-sectionid' => $section->section,
             'data-sectionreturnid' => $sectionreturn,
             'data-id' => $section->id,
+            'data-for' => "section",
+            'data-number' => $section->section,
             'style' => $style
         ]);
         $templatecontext += [

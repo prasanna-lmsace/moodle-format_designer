@@ -29,7 +29,7 @@
         "controlmenu": "[tools menu]",
         "header": {
             "name": "Section title",
-            "title": "<a href=\"http://moodle/course/view.php?id=5#section-0\">Section title</a>",
+            "title": "<a href=\"#\">Section title</a>",
             "url": "#",
             "ishidden": true
         },
@@ -86,20 +86,10 @@
         "highlightedlabel" : "Highlighted"
     }
 }}
-<li id="section-{{num}}"
-    class="section course-section main {{#onlysummary}} section-summary {{/onlysummary}} clearfix
-            {{#ishidden}} hidden {{/ishidden}} {{#iscurrent}} current {{/iscurrent}}
-            {{#isstealth}} orphaned {{/isstealth}} {{sectionclass}}"
-    data-sectionid="{{num}}"
-    data-sectionreturnid="{{sectionreturnid}}"
-    data-for="section"
-    data-id="{{id}}"
-    data-number="{{num}}"
-    style="{{{style}}}"
->
+{{{sectionhead}}}
 
     {{$ format_designer/section_layout }}
         {{> format_designer/section_layout }}
     {{/ format_designer/section_layout }}
 
-</li>
+{{{sectionend}}}

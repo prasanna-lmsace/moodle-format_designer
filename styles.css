@@ -20,6 +20,7 @@
         max-width: none;
     }
 }
+
 @media (min-width: 768px) {
     .format-designer .header-maxwidth,
     .format-designer .secondary-navigation,
@@ -49,7 +50,8 @@
     border-color: #ccc;
 }
 .format-designer ul.designer .card-layout .card.card-list .card-body .mod-indent-outer > div {
-    display: table-cell;
+    /* display: table-cell; */
+    height: 100%;
     position: relative;
 }
 .format-designer ul.designer .card.card-list .card-body .mod-indent-outer .completion-info {
@@ -124,7 +126,7 @@
 }
 .format-designer .course-content ul.designer li.section .section-header-content > .d-flex {
     margin-bottom: 20px;
-    display: inline-block !important;
+    display: inline-block;
 }
 .format-designer .course-content ul.designer li.section .categorise-section-block {
     display: inline-block;
@@ -377,8 +379,10 @@ body.format-designer.editing ul.designer .section .circles-layout .activity .edi
     left: 0;
     z-index: -1;
 }
-.format-designer .course-content ul.designer li.section.main .section-background-style.section-design-whole .mask-inner-section,
-.format-designer .course-content ul.designer li.section .section-header-content .section-background-style.sectiondesign-header .mask-inner-section {
+.format-designer .course-content ul.designer li.section.main
+.section-background-style.section-design-whole .mask-inner-section,
+.format-designer .course-content ul.designer li.section .section-header-content
+.section-background-style.sectiondesign-header .mask-inner-section {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -753,34 +757,48 @@ ul li {
 .format-designer .designer .section.img-text .activity:hover .activityinstance .img-element.content-hide-hover .img-block {
     visibility: hidden;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-hide-hover .img-block {
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-hide .img-block,
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-show-hover .img-block,
+.format-designer .designer .section.img-text.circles-layout .activity:hover
+.activityinstance .img-element.content-hide-hover .img-block {
     background: none;
 }
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-show-hover .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide-hover .img-block {
+.format-designer .designer .section.img-text.circles-layout .activity:hover
+.activityinstance .img-element.content-show-hover .img-block,
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-hide-hover .img-block {
     background: #eee;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide-hover .img-block {
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-show .img-block,
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-hide .img-block,
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-show-hover .img-block,
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-hide-hover .img-block {
     visibility: visible;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-show .img-block .mod-icon-url {
     visibility: visible;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-hide .img-block .mod-icon-url {
     visibility: hidden;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity
+.activityinstance .img-element.content-show-hover .img-block .mod-icon-url {
     visibility: hidden;
 }
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-show-hover .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity:hover
+.activityinstance .img-element.content-show-hover .img-block .mod-icon-url {
     visibility: visible;
 }
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-hide-hover .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity:hover
+.activityinstance .img-element.content-hide-hover .img-block .mod-icon-url {
     visibility: hidden;
 }
 .format-designer .designer .section.img-text.link-layout .activity .activityinstance .img-block {
@@ -811,15 +829,19 @@ ul li {
 .format-designer .designer .section.img-text .activity .activityinstance.content-hide-hover .inplaceeditable {
     visibility: visible;
 }
-.format-designer .designer .section.img-text .activity:hover .activityinstance.content-hide-hover .inplaceeditable {
+.format-designer .designer .section.img-text .activity:hover .activityinstance.content-hide-hover
+.inplaceeditable {
     visibility: hidden;
 }
-.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable .activity-instance {
+.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
+.activity-instance {
     width: 90%;
     display: inline-flex !important;
 }
-.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable .activity-instance .activitytitle,
-.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable .activity-instance .activitytitle .media-body .activityname .aalink .instancename {
+.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
+.activity-instance .activitytitle,
+.format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
+.activity-instance .activitytitle .media-body .activityname .aalink .instancename {
     width: 100%;
     display: block;
 }
@@ -862,7 +884,7 @@ ul li {
     text-align: left;
     padding-left: 0;
     margin: 0;
-    display: flex !important;
+    /* display: flex !important; */
     flex-wrap: wrap;
 }
 .format-designer .designer .section .content .section.card-layout li.activity .activity-block.designer {
@@ -1126,7 +1148,7 @@ ul li {
     color: rgb(59, 59, 59);
     text-decoration: none;
     text-indent: 0;
-    margin-top: 10px;
+    margin-top: 5px;
     display: inline-block;
 }
 .format-designer .designer .section .content .section.list-layout li.activity .activityinstance .aalink {
@@ -1832,15 +1854,16 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     padding-right: 0;
     display: block;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable .activity-instance .activitytitle .img-element,
-.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable .activity-instance .activitytitle .img-element {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable
+.activity-instance .activitytitle .img-element,
+.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable
+.activity-instance .activitytitle .img-element {
     display: none;
 }
-.format-designer .designer .section.img-text .circle-layout .activity-block .activityinstance .activity-instance {
-    display: block !important;
-}
-.format-designer .designer .section.img-text .circle-layout .activity-block .activityinstance .activity-instance .activitytitle {
+.format-designer .designer .section.img-text .circle-layout .activity-block .activityinstance
+.activity-instance .activitytitle {
     display: block;
+    margin: 0 auto;
 }
 .format-designer .designer .section .content .section li.activity.circle-layout .activityinstance .activity-type {
     margin-left: 0;
@@ -1917,7 +1940,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 /*Course Integrate time management*/
 
 .format-designer .course-info-block {
-    padding: 15px;
+    margin: 15px;
     clear: both;
 }
 .format-designer.path-course-view .completionprogress {
@@ -2030,7 +2053,6 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .course-content ul.designer.kanban-board li.section.main#section-0 {
     min-width: 767px;
     max-width: none;
-    margin-bottom: 0;
     background: none;
     box-shadow: none;
     padding: 0;
