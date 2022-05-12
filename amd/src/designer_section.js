@@ -95,7 +95,6 @@
     };
 
     DesignerSection.prototype.expandSection = () => {
-        // Alert();
         var sectionID = window.location.hash;
         if (sectionID) {
             var id = sectionID.substring(1);
@@ -118,8 +117,6 @@
             }
         }
     };
-
-
 
     DesignerSection.prototype.fullmodcontentHandler = function(event) {
         var THIS = $(event.currentTarget);
