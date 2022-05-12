@@ -87,6 +87,17 @@ class cmitem extends \core_courseformat\output\local\content\section\cmitem {
         $r = $this->format->get_renderer($PAGE);
         $formatdata = $r->render_course_module($mod, 0, $this->displayoptions, $this->section, $data);
         $data = array_merge($data, $formatdata);
+        $data['modclasses'] .= format_designer_get_module_layoutclass($this->format, $this->section);
+        $data['modclasses'] .= (!empty($mod->availableinfo)) ? ' restricted ' : '';
+
+        $data['modulestart'] = \html_writer::start_tag('li', [
+            'class' => $data['modclasses'],
+            'id' => $data['anchor'],
+            'data-for' => "cmitem",
+            'data-id' => $data['cm']->id
+        ]);
+        $data['moduleend'] = \html_writer::end_tag('li');
+
     }
 
 }

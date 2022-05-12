@@ -1183,3 +1183,30 @@ function format_designer_editsetting_style($page) {
         echo html_writer::tag('style', $style, []);
     }
 }
+
+/**
+ * Get modules layout class Moodle CI not allowed to add li in mustache.
+ *
+ * @param object $format
+ * @param section_info $section
+ * @return string|null
+ */
+function format_designer_get_module_layoutclass($format, $section) {
+    $sectiontype = $format->get_section_option($section->id, 'sectiontype') ?: 'default';
+
+    if ($sectiontype == 'list') {
+        $sectionlayoutclass = " position-relative ";
+    } else if ($sectiontype == 'cards') {
+        $sectionlayoutclass = ' card ';
+    }
+    $prolayouts = format_designer_get_pro_layouts();
+    if (in_array($sectiontype, $prolayouts)) {
+        if (format_designer_has_pro()) {
+            if ($sectiontype == 'circles') {
+                $sectionlayoutclass = ' circle-layout card ';
+            }
+        }
+    }
+
+    return $sectionlayoutclass ?? '';
+}
