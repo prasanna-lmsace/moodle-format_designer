@@ -50,8 +50,7 @@
     border-color: #ccc;
 }
 .format-designer ul.designer .card-layout .card.card-list .card-body .mod-indent-outer > div {
-    /* display: table-cell; */
-    height: 100%;
+    display: table-cell;
     position: relative;
 }
 .format-designer ul.designer .card.card-list .card-body .mod-indent-outer .completion-info {
@@ -458,6 +457,9 @@ body.format-designer.editing ul.designer .section .circles-layout .activity .edi
 .format-designer .course-content ul.designer li.section .section-header-content .sectionname {
     display: inline-block;
 }
+.format-designer .course-content ul.designer li.section .section-header-content .sectionbadges {
+    display: inline-block;
+}
 .format-designer .course-content ul.designer li.section .section-header-content .sectionname .inplaceeditable .quickeditlink {
     margin-left: 10px;
 }
@@ -727,7 +729,7 @@ ul li {
     float: left;
 }
 .format-designer .designer .section.img-text.circles-layout .activity .call-action-block a > span i {
-    margin-top: 30px;
+    margin-top: 0;
 }
 .format-designer .designer .section.img-text .activity .activityinstance {
     width: 100%;
@@ -841,11 +843,21 @@ ul li {
     width: 90%;
     display: inline-block;
 }
+.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance
+.inplaceeditable .activity-instance {
+    margin: 0 auto;
+}
 .format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
 .activity-instance .activitytitle,
 .format-designer.editing .designer .section.img-text .activity .activityinstance .inplaceeditable
 .activity-instance .activitytitle .media-body .activityname .aalink .instancename {
     width: 100%;
+    display: flex;
+}
+.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable
+.activity-instance .activitytitle,
+.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable
+.activity-instance .activitytitle .media-body .activityname .aalink .instancename {
     display: block;
 }
 .format-designer .designer .section.img-text.card-layout .activity .activityinstance .inplaceeditable {
@@ -887,7 +899,6 @@ ul li {
     text-align: left;
     padding-left: 0;
     margin: 0;
-    /* display: flex !important; */
     flex-wrap: wrap;
 }
 .format-designer .designer .section .content .section.card-layout li.activity .activity-block.designer {
@@ -1867,6 +1878,10 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .activity-instance .activitytitle {
     display: block;
     margin: 0 auto;
+}
+.format-designer .designer .section.img-text .circle-layout .activity-block .activityinstance
+.activity-instance .activitytitle .img-element {
+    display: none;
 }
 .format-designer .designer .section .content .section li.activity.circle-layout .activityinstance .activity-type {
     margin-left: 0;
