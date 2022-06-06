@@ -839,9 +839,11 @@ class format_designer extends format_base {
                 $data['coursedisplay'] = 0;
             }
         } else {
-            if ($data['coursetype'] == DESIGNER_TYPE_KANBAN) {
-                $this->setup_kanban_layouts($oldcourse);
-                $data['coursedisplay'] = 0;
+            if (isset($data['coursetype'])) {
+                if ($data['coursetype'] == DESIGNER_TYPE_KANBAN) {
+                    $this->setup_kanban_layouts($oldcourse);
+                    $data['coursedisplay'] = 0;
+                }
             }
         }
         unset($data['courseheader']);

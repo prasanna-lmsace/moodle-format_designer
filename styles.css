@@ -2119,11 +2119,15 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block .card-body {
     padding: 0;
 }
+.format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block .card-body .mod-visits-block {
+    left: 15px;
+    bottom: 15px;
+}
 .format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block .activityinstance {
     padding: 10px;
 }
 .format-designer .designer .section .content .section li.activity.videotime .activity-block.designer .mod-indent-outer div .mod-content {
-    display: none;
+    padding-left: 15px;
 }
 .format-designer .designer .section .content .section.img-text li.activity.videotime .activity-block.designer {
     position: relative;
@@ -2188,11 +2192,15 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .designer .section .content .section.horizontal-circles-layout li.activity {
     width: 100%;
 }
-.format-designer:not(.editing) .designer .section.desktop-two-column .content .section.horizontal-circles-layout li.activity {
+.format-designer .designer .section.desktop-two-column .content .section.horizontal-circles-layout li.activity {
     width: 49%;
 }
-.format-designer:not(.editing) .designer .section.desktop-four-column .content .section.horizontal-circles-layout li.activity {
+.format-designer .designer .section.desktop-four-column .content .section.horizontal-circles-layout li.activity {
     width: 24%;
+}
+.format-designer .designer .section .content .section.horizontal-circles-layout li.activity .card {
+    border: 0;
+    box-shadow: none;
 }
 .format-designer .designer .section .content .section.horizontal-circles-layout li.activity .card .card-body {
     min-height: 200px;
@@ -2363,7 +2371,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     margin-top: -18px;
 }
 .format-designer .course-content ul.course-type-flow.designer .section.main.stack-header-collapsing .content.flow-open.collapsing {
-    width: 47%;
+    /* width: 47%; */
     width: 100%;
     height: auto;
     display: inline-block;
@@ -2390,6 +2398,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     margin-top: -10px;
     margin-left: 15px;
     margin-right: 0;
+    margin-bottom: 30px;
     float: none;
 }
 .format-designer .course-content ul.designer.course-type-flow li.section ul.section.img-text,

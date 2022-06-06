@@ -20,8 +20,8 @@
  * @copyright  2021 bdecent gmbh <https://bdecent.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- define(['jquery', 'core/fragment', 'core/templates', 'core/loadingicon', 'core/ajax', 'core/config'],
- function($, Fragment, Templates, Loadingicon, Ajax, config) {
+ define(['jquery', 'core/fragment', 'core/templates', 'core/loadingicon', 'core/ajax'],
+ function($, Fragment, Templates, Loadingicon, Ajax) {
 
     var SELECTOR = {
         ACTIVITYLI: 'li.activity',
@@ -37,18 +37,17 @@
         }
     });
 
-    
-
     /**
      * Control designer format action
      * @param {int} courseId
      * @param {int} contextId
+     * @param {bool} popupActivities
      */
     let DesignerSection = function(courseId, contextId, popupActivities) {
         var self = this;
         self.courseId = courseId;
         self.contextId = contextId;
-        self.popupActivities = popupActivities
+        self.popupActivities = popupActivities;
 
         $('body').delegate(self.SectionController, 'click', self.sectionLayoutaction.bind(this));
         $("body").delegate(self.RestrictInfo, "click", self.moduleHandler.bind(this));
@@ -66,7 +65,7 @@
             $('.collapse').on('show.bs.collapse', function() {
                 $(this).parents('li.section').addClass('stack-header-collapsing');
                 var sectionid = $(this).parents('li.section').attr('id');
-                var section = document.getElementById(sectionid)
+                var section = document.getElementById(sectionid);
                 var distance = section.offsetTop - document.body.scrollTop;
                 setTimeout(() => window.scroll(0, distance), 50);
             }).on('shown.bs.collapse', function() {
