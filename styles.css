@@ -361,7 +361,8 @@ body.format-designer.editing ul.designer .section .circles-layout .activity .edi
     z-index: -1;
 }
 .format-designer .course-content ul.designer li.section.main .section-background-style.section-design-whole .mask-inner-section,
-.format-designer .course-content ul.designer li.section .section-header-content .section-background-style.sectiondesign-header .mask-inner-section {
+.format-designer .course-content ul.designer li.section .section-header-content
+.section-background-style.sectiondesign-header .mask-inner-section {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -724,31 +725,42 @@ ul li {
 .format-designer .designer .section.img-text .activity .activityinstance .img-element.content-remove .img-block {
     display: none;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-hide-hover .img-block {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide
+.img-block,
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover
+.img-block,
+.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-hide-hover
+.img-block {
     background: none;
 }
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-show-hover .img-block,
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide-hover .img-block {
+.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-show-hover
+.img-block,
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide-hover
+.img-block {
     background: #eee;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show
+.img-block .mod-icon-url {
     visibility: visible;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-hide
+.img-block .mod-icon-url {
     visibility: hidden;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-show-hover
+.img-block .mod-icon-url {
     visibility: hidden;
 }
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-show-hover .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-show-hover
+.img-block .mod-icon-url {
     visibility: visible;
 }
-.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-hide-hover .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity:hover .activityinstance .img-element.content-hide-hover
+.img-block .mod-icon-url {
     visibility: hidden;
 }
-.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-remove .img-block .mod-icon-url {
+.format-designer .designer .section.img-text.circles-layout .activity .activityinstance .img-element.content-remove
+.img-block .mod-icon-url {
     display: none;
 }
 .format-designer .designer .section.img-text.link-layout .activity .activityinstance .img-block {
@@ -2126,7 +2138,8 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block .activityinstance {
     padding: 10px;
 }
-.format-designer .designer .section .content .section li.activity.videotime .activity-block.designer .mod-indent-outer div .mod-content {
+.format-designer .designer .section .content .section li.activity.videotime .activity-block.designer
+.mod-indent-outer div .mod-content {
     padding-left: 15px;
 }
 .format-designer .designer .section .content .section.img-text li.activity.videotime .activity-block.designer {
@@ -2137,31 +2150,38 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     position: absolute;
     bottom: 0;
     height: 7px;
-    border-radius: 0px;
+    border-radius: 0;
 }
-.format-designer .designer.course-type-flow .section .content .section.img-text li.activity.videotime .activity-block.designer .video-progress,
-.format-designer .designer.kanban-board .section .content .section.img-text li.activity.videotime .activity-block.designer .video-progress {
+.format-designer .designer.course-type-flow .section .content .section.img-text li.activity.videotime
+.activity-block.designer .video-progress,
+.format-designer .designer.kanban-board .section .content .section.img-text li.activity.videotime
+.activity-block.designer .video-progress {
     height: 5px;
 }
-.format-designer .designer .section .content .section.img-text li.activity.videotime .activity-block.designer .video-progress .progress-bar {
+.format-designer .designer .section .content .section.img-text li.activity.videotime .activity-block.designer
+.video-progress .progress-bar {
     background: #28a744;
 }
-.format-designer .designer .section .content .section.img-text li.activity.videotime .activity-block.designer .contentwithoutlink .videotimetabs {
+.format-designer .designer .section .content .section.img-text li.activity.videotime .activity-block.designer
+.contentwithoutlink .videotimetabs {
     display: none;
 }
 .format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block .completion-html-card {
     padding-left: 10px;
     padding-bottom: 20px;
 }
-.format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block .completion-html-card .completion-html-card {
+.format-designer .designer .section.img-text.card-layout .activity.videotime .activity-block
+.completion-html-card .completion-html-card {
     padding: 0;
     margin: 0;
 }
 .format-designer .designer .section.img-text .activity.videotime .activity-block .contentwithoutlink .panel-body,
-.format-designer .designer .section .content .section.img-text li.activity.videotime.hide-videotime-preview-image .activity-block.designer .contentwithoutlink {
+.format-designer .designer .section .content .section.img-text li.activity.videotime.hide-videotime-preview-image
+.activity-block.designer .contentwithoutlink {
     display: none;
 }
-.format-designer .designer .section .content .section.link-layout li.activity.videotime .activity-block.designer .contentwithoutlink {
+.format-designer .designer .section .content .section.link-layout li.activity.videotime
+.activity-block.designer .contentwithoutlink {
     width: 75%;
     vertical-align: middle;
     margin-bottom: 0;
@@ -2207,68 +2227,97 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 }
 
 @media (min-width: 767px) {
-    .format-designer .designer.kanban-board .section .content .section.img-text.horizontal-circles-layout li.activity .card {
+    .format-designer .designer.kanban-board .section .content .section.img-text.horizontal-circles-layout
+    li.activity .card {
         background: none;
     }
-    .format-designer .designer.kanban-board .section .content .section.img-text.horizontal-circles-layout li.activity .card .card-body {
+    .format-designer .designer.kanban-board .section .content .section.img-text.horizontal-circles-layout
+    li.activity .card .card-body {
         padding-bottom: 50px;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance {
         display: block;
         margin-bottom: 10px;
     }
-    .format-designer .designer .section.img-text.circles-layout .circle-layout.circle-size-medium .activity-block .activityinstance .img-element,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .activityinstance .img-element {
+    .format-designer .designer .section.img-text.circles-layout .circle-layout.circle-size-medium .activity-block
+    .activityinstance .img-element,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .activityinstance .img-element {
         margin-right: 10px;
         zoom: 200%;
     }
-    .format-designer .designer .section.img-text.circles-layout .circle-layout.circle-size-large .activity-block .activityinstance .img-element,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .activityinstance .img-element {
+    .format-designer .designer .section.img-text.circles-layout .circle-layout.circle-size-large .activity-block
+    .activityinstance .img-element,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .activityinstance .img-element {
         margin-right: 10px;
         zoom: 300%;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance .img-element {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance .img-element {
         float: left;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance .availability-info {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance .availability-info {
         left: auto;
         right: 0;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance .activity-type,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .mod-content,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance .cmname-block,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance ~ .completion-html-card,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .mod-visits-block,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .action-html-card {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance .activity-type,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .mod-content,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance .cmname-block,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance ~ .completion-html-card,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .mod-visits-block,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .action-html-card {
         text-align: left;
         display: block;
         margin-left: 100px;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance ~ .completion-html-card {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .activityinstance ~ .completion-html-card {
         margin-bottom: 0;
         position: absolute;
         bottom: 10px;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .completion-html-card .completion-html-card {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .completion-html-card .completion-html-card {
         margin-bottom: 0;
     }
     .format-designer.editing .designer .section .content .section li.activity.horizontal_circles .completion-html-card {
         margin-top: 20px;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .activityinstance .activity-type,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .mod-content,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .activityinstance .cmname-block,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .activityinstance ~ .completion-html-card,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .mod-visits-block,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium .activity-block .action-html-card {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .activityinstance .activity-type,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .mod-content,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .activityinstance .cmname-block,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .activityinstance ~ .completion-html-card,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .mod-visits-block,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-medium
+    .activity-block .action-html-card {
         margin-left: 180px;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .activityinstance .activity-type,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .mod-content,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .activityinstance .cmname-block,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .activityinstance ~ .completion-html-card,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .mod-visits-block,
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large .activity-block .action-html-card {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .activityinstance .activity-type,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .mod-content,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .activityinstance .cmname-block,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .activityinstance ~ .completion-html-card,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .mod-visits-block,
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles.circle-size-large
+    .activity-block .action-html-card {
         margin-left: 280px;
     }
     .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .action-html-card {
@@ -2276,20 +2325,23 @@ body.format-designer.editing .designer .section .content .section.card-layout li
         right: 20px;
         bottom: 15px;
     }
-    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .mod-visits-block p {
+    .format-designer .designer .section.img-text.horizontal-circles-layout li.horizontal_circles
+    .activity-block .mod-visits-block p {
         text-align: left;
     }
 
 }
 
 @media (max-width: 767px) {
-    .format-designer .designer .section .content .section.link-layout li.activity.videotime .activity-block.designer .contentwithoutlink {
+    .format-designer .designer .section .content .section.link-layout li.activity.videotime
+    .activity-block.designer .contentwithoutlink {
         width: 100%;
     }
 }
 
 @media (max-width: 575px) {
-    .format-designer .designer .section .content .section.link-layout li.activity.videotime .activity-block.designer .contentwithoutlink {
+    .format-designer .designer .section .content .section.link-layout li.activity.videotime
+    .activity-block.designer .contentwithoutlink {
         width: 90%;
     }
 }
@@ -2362,11 +2414,11 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     width: 31.7%;
 }
 .format-designer .course-content ul.course-type-flow.designer .section.main.stack-header-collapsing .section-header-content {
-    width: 50%;
     width: 100%;
     margin-top: -10px;
 }
-.format-designer .course-content ul.course-type-flow.designer .section.main.stack-header-collapsing .section-header-content.flow-none {
+.format-designer .course-content ul.course-type-flow.designer .section.main.stack-header-collapsing
+.section-header-content.flow-none {
     width: 100%;
     margin-top: -18px;
 }
@@ -2376,7 +2428,8 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     height: auto;
     display: inline-block;
 }
-.format-designer .course-content ul.course-type-flow.designer .section.main.stack-header-collapsing .content.flow-open ul.section.img-text li.activity {
+.format-designer .course-content ul.course-type-flow.designer .section.main.stack-header-collapsing
+.content.flow-open ul.section.img-text li.activity {
     width: 100%;
     margin-left: 15px;
 }
@@ -2415,12 +2468,15 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .course-content ul.designer.course-type-flow.designer li.section .content .section li.activity .mod-indent-outer {
     display: inline-block; /*if needed*/
 }
-.format-designer .course-content ul.designer.course-type-flow li.section.section-background-color .section-header-content .section-background-style.sectiondesign-header,
-.format-designer .course-content ul.designer.course-type-flow li.section.section-header-image .section-header-content .section-background-style.sectiondesign-header {
+.format-designer .course-content ul.designer.course-type-flow li.section.section-background-color
+.section-header-content .section-background-style.sectiondesign-header,
+.format-designer .course-content ul.designer.course-type-flow li.section.section-header-image
+.section-header-content .section-background-style.sectiondesign-header {
     border-radius: 5px;
     z-index: -1;
 }
-.format-designer .course-content ul.designer.course-type-flow li.section.section-background-color .section-header-content .bg-overlay {
+.format-designer .course-content ul.designer.course-type-flow li.section.section-background-color
+.section-header-content .bg-overlay {
     border-radius: 5px;
 }
 .format-designer .course-content ul.course-type-flow.designer .section.main.section-background-color .section-header-content:before,
