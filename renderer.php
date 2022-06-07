@@ -1266,7 +1266,6 @@ class format_designer_renderer extends format_section_renderer_base {
             'elementstate' => $this->get_activity_elementclasses($mod),
             'modstyle' => isset($modstyle) ? $modstyle : '',
         ];
-
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");
             $prodata = \local_designer\options::render_course_module($mod, $cmlist, $section);
@@ -1309,7 +1308,7 @@ class format_designer_renderer extends format_section_renderer_base {
     public function get_cmname($mod, $displayoptions = []) {
 
         $options = (format_designer_has_pro()) ? \local_designer\options::get_options($mod->id) : [];
-        if ($mod->url || ($mod->modname == 'videotime' && $options && $options->useactivityimage)) {
+        if ($mod->url || ($mod->modname == 'videotime')) {
             list($linkclasses, $textclasses) = $this->course_section_cm_classes($mod);
             $groupinglabel = $mod->get_grouping_label($textclasses);
             $temp1 = new \core_course\output\course_module_name($mod, $this->page->user_is_editing(), $displayoptions);
@@ -1366,7 +1365,7 @@ class format_designer_renderer extends format_section_renderer_base {
         global $DB;
         $output = '';
         $options = (format_designer_has_pro()) ? \local_designer\options::get_options($mod->id) : [];
-        if ($mod->modname != 'videotime' || ($options && !$options->useactivityimage)) {
+        if ($mod->modname != 'videotime') {
             return $this->courserenderer->course_section_cm_text($mod, $displayoptions);
         }
         if (!$mod->is_visible_on_course_page()) {
