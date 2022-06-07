@@ -153,14 +153,16 @@
         }
     };
 
-    DesignerSection.prototype.removeSectionSpinner = function(sectioninfo, spinner, delay) {
+    DesignerSection.prototype.removeSectionSpinner = function(sectioninfo, spinnerHandler, delay) {
         var element = $(sectioninfo);
-        window.setTimeout(function() {
-            element.removeClass('editinprogress');
-            if (spinner) {
-                spinner.hide();
-            }
-        }, delay);
+        if (element) {
+            window.setTimeout(function() {
+                element.removeClass('editinprogress');
+                if (spinnerHandler) {
+                    spinnerHandler.hide();
+                }
+            }, delay);
+        }
     };
 
     /**
