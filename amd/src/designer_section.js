@@ -20,8 +20,8 @@
  * @copyright  2021 bdecent gmbh <https://bdecent.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- define(['jquery', 'core/fragment', 'core/templates', 'core/loadingicon', 'core/ajax'],
- function($, Fragment, Templates, Loadingicon, Ajax) {
+ define(['jquery', 'core/loadingicon', 'core/ajax'],
+ function($, Loadingicon, Ajax) {
 
     var SELECTOR = {
         ACTIVITYLI: 'li.activity',
@@ -121,7 +121,6 @@
             if (ispopupModule && !document.body.classList.contains('editing')) {
                 var li = event.target.closest('li.activity');
                 li.querySelector('a[href]').click();
-                // event.target.closest('a').click();
             }
             return null;
         }
@@ -131,7 +130,6 @@
     };
 
     DesignerSection.prototype.expandSection = () => {
-        // Alert();
         var sectionID = window.location.hash;
         if (sectionID) {
             var id = sectionID.substring(1);

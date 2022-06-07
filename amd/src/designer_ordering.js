@@ -122,9 +122,9 @@ define(['jquery', 'core_course/actions', 'core/ajax'], function($, action, ajax)
         activity.addClass(CSS.EDITINPROGRESS);
         var actionarea = activity.find(SELECTOR.ACTIONAREA).get(0);
         if (actionarea) {
-            var spinner = M.util.add_spinner(Y, Y.Node(actionarea));
-            spinner.show();
-            return spinner;
+            var spinnerHandler = M.util.add_spinner(Y, Y.Node(actionarea));
+            spinnerHandler.show();
+            return spinnerHandler;
         }
         return null;
     }
