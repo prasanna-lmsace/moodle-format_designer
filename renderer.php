@@ -1061,6 +1061,7 @@ class format_designer_renderer extends format_section_renderer_base {
             'coursetype' => $this->course_type_sectionclasses($course, $section, $modinfo),
             'stylerules' => $sectionstylerules,
             'flowcourse' => isset($course->coursetype) && $course->coursetype == DESIGNER_TYPE_FLOW ? true : false,
+            'maskimage' => ($section->sectiondesignermaskimage) ? true : false,
         ];
 
         if (format_designer_has_pro()) {

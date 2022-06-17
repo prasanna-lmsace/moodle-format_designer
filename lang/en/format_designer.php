@@ -269,3 +269,4 @@ $string['flowanimationduration_help'] = 'Change the animation duration for the f
 $string['showanimation'] = 'Flow animation';
 $string['showanimation_help'] = 'Enable to reveal the modules with animation effect.';
 $string['verticalcircles'] = 'Vertical circles';
+$string['horizontal_circles'] = 'Horizontal Circles';

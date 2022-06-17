@@ -753,7 +753,7 @@ class format_designer extends format_base {
                 $name = $name.'width';
                 $availablewidth = array_slice($width, 0, $size);
                 $sectionoptions[$name] = [
-                    'default' => isset($design->$name) ? $design->$name : 0,
+                    'default' => isset($design->$name) && $foreditform ? $design->$name : 0,
                     'type' => PARAM_INT,
                     'label' => new lang_string($name, 'format_designer'),
                     'element_type' => 'select',
@@ -773,7 +773,7 @@ class format_designer extends format_base {
         // Include pro feature options for section.
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot."/local/designer/lib.php");
-            $prosectionoptions = local_designer_get_pro_section_options();
+            $prosectionoptions = local_designer_get_pro_section_options($foreditform);
             $sectionoptions = array_merge($sectionoptions, $prosectionoptions);
         }
         return $sectionoptions;
@@ -841,7 +841,7 @@ class format_designer extends format_base {
         } else {
             if (isset($data['coursetype'])) {
                 if ($data['coursetype'] == DESIGNER_TYPE_KANBAN) {
-                    $this->setup_kanban_layouts($oldcourse);
+                    $this->setup_kanban_layouts($data);
                     $data['coursedisplay'] = 0;
                 }
             }

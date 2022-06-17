@@ -20,8 +20,8 @@
  * @copyright  2021 bdecent gmbh <https://bdecent.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- define(['jquery', 'core/loadingicon', 'core/ajax'],
- function($, Loadingicon, Ajax) {
+ define(['jquery', 'core/fragment', 'core/templates', 'core/loadingicon', 'core/ajax'],
+ function($, Fragment, Templates, Loadingicon, Ajax) {
 
     var SELECTOR = {
         ACTIVITYLI: 'li.activity',
@@ -121,15 +121,18 @@
             if (ispopupModule && !document.body.classList.contains('editing')) {
                 var li = event.target.closest('li.activity');
                 li.querySelector('a[href]').click();
+                // Event.target.closest('a').click();
             }
             return null;
         }
         var card = event.target.closest("[data-action=go-to-url]");
         let modurl = card.getAttribute('data-url');
         window.location.href = modurl;
+        return true;
     };
 
     DesignerSection.prototype.expandSection = () => {
+        // Alert();
         var sectionID = window.location.hash;
         if (sectionID) {
             var id = sectionID.substring(1);
@@ -153,16 +156,14 @@
         }
     };
 
-    DesignerSection.prototype.removeSectionSpinner = function(sectioninfo, spinnerHandler, delay) {
+    DesignerSection.prototype.removeSectionSpinner = function(sectioninfo, spinner, delay) {
         var element = $(sectioninfo);
-        if (element) {
-            window.setTimeout(function() {
-                element.removeClass('editinprogress');
-                if (spinnerHandler) {
-                    spinnerHandler.hide();
-                }
-            }, delay);
-        }
+        window.setTimeout(function() {
+            element.removeClass('editinprogress');
+            if (spinner) {
+                spinner.hide();
+            }
+        }, delay);
     };
 
     /**

@@ -10,7 +10,6 @@ define(['jquery', 'core_course/actions', 'core/ajax'], function($, action, ajax)
         ACTIONAREA: '.actions',
         SECTIONLI: 'li.section',
     };
-
     /**
      * Implement the init.
      */
@@ -24,25 +23,23 @@ define(['jquery', 'core_course/actions', 'core/ajax'], function($, action, ajax)
                     // eslint-disable-next-line camelcase
                     set_visibility_resource_ui: function(args) {
                         var mainelement = $(args.element.getDOMNode());
-                        if (mainelement) {
-                            var cmid = getModuleId(mainelement);
-                            if (cmid) {
-                                mainelement.css('opacity', 0);
-                                var sectionreturn = mainelement.find('.' + CSS.EDITINGMOVE).attr('data-sectionreturn');
-                                var sectionId = mainelement.closest(SELECTOR.SECTIONLI).attr('data-id');
-                                var spinner = addActivitySpinner(mainelement);
-                                var promises = ajax.call([{
-                                    methodname: 'format_designer_get_module',
-                                    args: {id: cmid, sectionid: sectionId, sectionreturn: sectionreturn}
-                                }], true);
-                                $.when.apply($, promises)
-                                    .done(function(data) {
-                                    removeSpinner(mainelement, spinner, 400);
-                                        replaceActivityHtmlWith(data);
-                                    }).fail(function() {
-                                        removeSpinner(mainelement, spinner);
-                                    });
-                            }
+                        var cmid = getModuleId(mainelement);
+                        if (cmid) {
+                            mainelement.css('opacity', 0);
+                            var sectionreturn = mainelement.find('.' + CSS.EDITINGMOVE).attr('data-sectionreturn');
+                            var sectionId = mainelement.closest(SELECTOR.SECTIONLI).attr('data-id');
+                            var spinner = addActivitySpinner(mainelement);
+                            var promises = ajax.call([{
+                                methodname: 'format_designer_get_module',
+                                args: {id: cmid, sectionid: sectionId, sectionreturn: sectionreturn}
+                            }], true);
+                            $.when.apply($, promises)
+                                .done(function(data) {
+                                removeSpinner(mainelement, spinner, 400);
+                                    replaceActivityHtmlWith(data);
+                                }).fail(function() {
+                                    removeSpinner(mainelement, spinner);
+                                });
                         }
                     }
 
