@@ -22,6 +22,24 @@
     Note: This template is a wrapper around the section/content template to allow course formats and theme designers to
     modify parts of the wrapper without having to copy/paste the entire template.
 
+    Example context (json):
+    {
+        "num": 3,
+        "id": 35,
+        "ishidden": false,
+        "iscurrent": true,
+        "currentlink": "<span class=\"accesshide\">This topic</span>",
+        "cmcontrols": "[Add an activity or resource]",
+        "iscoursedisplaymultipage": true,
+        "sectionreturnid": 0,
+        "contentcollapsed": false,
+        "insertafter": true,
+        "numsections": 42,
+        "sitehome": false,
+        "highlightedlabel" : "Highlighted",
+        "title": "Course section ",
+        "startid": "course-collapse-section"
+    }
 }}
 {{<format_designer/courseformat/content}}
     {{$content}}
