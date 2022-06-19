@@ -128,7 +128,6 @@
     display: inline-block;
 }
 .format-designer .course-content ul.designer li.section h3.sectionname {
-    max-width: 90%;
     margin-top: 0;
     display: inline-block;
     vertical-align: middle;
@@ -2642,5 +2641,46 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     .format-designer .course-content ul.course-type-flow.designer .section.main .section-header-content {
         width: 100%;
         margin: 0 auto 30px;
+    }
+}
+
+.flow-animation {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        transform-origin: center;
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        transform-origin: center;
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        transform-origin: center;
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }

@@ -434,6 +434,10 @@ class format_designer extends \core_courseformat\base {
                     'default' => get_string('timemanagementmissing', 'format_designer'),
                     'type' => PARAM_RAW_TRIMMED,
                     'label' => new lang_string('courseduedate', 'format_designer'),
+                ],
+                'courseindex' => [
+                    'default' => 0,
+                    'type' => PARAM_INT
                 ]
             ];
         }
@@ -534,7 +538,6 @@ class format_designer extends \core_courseformat\base {
                     'help' => 'coursecompletiondate',
                     'help_component' => 'format_designer',
                     'disabledif' => [['enablecompletion', 'neq', 1]],
-
                 ],
 
                 'activityprogress' => [
@@ -549,7 +552,6 @@ class format_designer extends \core_courseformat\base {
                     'help' => 'activityprogress',
                     'help_component' => 'format_designer',
                     'disabledif' => [['enablecompletion', 'neq', 1]],
-
                 ],
                 'coursetype' => [
                     'label' => new lang_string('coursetype', 'format_designer'),
@@ -589,6 +591,19 @@ class format_designer extends \core_courseformat\base {
                     'label' => new lang_string('listwidth', 'format_designer'),
                     'element_type' => 'text',
                     'hideif' => ['coursetype', 'neq', DESIGNER_TYPE_KANBAN]
+                ],
+                'courseindex' => [
+                    'label' => new lang_string('courseindex', 'format_designer'),
+                    'element_type' => 'select',
+                    'element_attributes' => [
+                        [
+                            0 => new lang_string('show'),
+                            self::HIDE_ON_COURSEPAGE => new lang_string('hideoncourses', 'format_designer'),
+                            self::HIDE_EVERYWHERE => new lang_string('hideeverywhere', 'format_designer'),
+                        ],
+                    ],
+                    'help' => 'courseindex',
+                    'help_component' => 'format_designer',
                 ]
             ];
 
