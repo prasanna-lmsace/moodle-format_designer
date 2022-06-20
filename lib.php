@@ -1332,6 +1332,7 @@ function format_designer_coursemodule_standard_elements($formwrapper, $mform) {
             $title = get_string('activity:'.$element, 'format_designer');
             $mform->addElement('select', $name, $title, $choice);
             $mform->setType($name, PARAM_INT);
+            $mform->setDefault($name, 1);
             if (isset($design->activityelements[$element])) {
                 $mform->setDefault($name, $design->activityelements[$element]);
             }
