@@ -313,7 +313,7 @@ class lib_test extends \advanced_testcase {
     public function test_kanban_setup() {
         global $DB;
         $this->resetAfterTest();
-        $record = ['format' => 'designer', 'coursetype' => '0', 'numsections' => 3];
+        $record = ['format' => 'designer', 'designercoursetype' => '0', 'numsections' => 3];
         $course = $this->getDataGenerator()->create_course($record);
 
         $format = course_get_format($course);
@@ -324,7 +324,7 @@ class lib_test extends \advanced_testcase {
             $format->set_section_option($section->id, 'sectiontype', 'list');
         }
 
-        $data = ['id' => $course->id, 'coursetype' => DESIGNER_TYPE_KANBAN];
+        $data = ['id' => $course->id, 'designercoursetype' => DESIGNER_TYPE_KANBAN];
         $format->update_course_format_options($data);
 
         foreach ($coursesections as $section) {

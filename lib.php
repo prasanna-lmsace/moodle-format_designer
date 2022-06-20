@@ -895,7 +895,8 @@ class format_designer extends format_base {
             }
             if (isset($data['designercoursetype'])) {
                 if (isset($oldcourse['designercoursetype'])) {
-                    if ($data['designercoursetype'] == DESIGNER_TYPE_KANBAN && $oldcourse['designercoursetype'] != DESIGNER_TYPE_KANBAN) {
+                    if ($data['designercoursetype'] == DESIGNER_TYPE_KANBAN
+                        && $oldcourse['designercoursetype'] != DESIGNER_TYPE_KANBAN) {
                         $this->setup_kanban_layouts($oldcourse);
                     }
                 }
@@ -917,7 +918,7 @@ class format_designer extends format_base {
         return $this->update_format_options($data);
     }
 
-      /**
+    /**
      * Update the kanban layouts default options when layout changed to kanban mode.
      *
      * @param array $course
@@ -1358,7 +1359,6 @@ function format_designer_include_prosettings($settings) {
  */
 function format_designer_coursemodule_standard_elements($formwrapper, $mform) {
     global $CFG, $DB;
-    // print_object($mform);
     $cm = $formwrapper->get_coursemodule();
     $course = $formwrapper->get_course();
     if ($course->format == 'designer') {

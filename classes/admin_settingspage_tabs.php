@@ -15,17 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Admin settings page tabs file
+ *
  * @package   format_designer
  * @copyright 2016 Ryan Wyllie
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
- * @package   format_designer
- * @copyright 2016 Ryan Wyllie
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Add the admin settings like tabs same as boost tabs.
  */
 class format_designer_admin_settingspage_tabs extends admin_settingpage {
 
@@ -45,6 +43,12 @@ class format_designer_admin_settingspage_tabs extends admin_settingpage {
         return true;
     }
 
+    /**
+     * Add setting to the page tab.
+     *
+     * @param admin_settingpage $tab
+     * @return void
+     */
     public function add($tab) {
         return $this->add_tab($tab);
     }
