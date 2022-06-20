@@ -83,16 +83,18 @@
 
         {{! Section name header }}
         {{^section.hidesectiontitle}}
-            {{#singleheader}}
-            {{$ format_designer/courseformat/content/section/header }}
-                {{> format_designer/courseformat/content/section/header }}
-            {{/ format_designer/courseformat/content/section/header }}
-            {{/singleheader}}
-            {{#header}}
-            {{$ format_designer/courseformat/content/section/header }}
-                {{> format_designer/courseformat/content/section/header }}
-            {{/ format_designer/courseformat/content/section/header }}
-            {{/header}}
+            <div class="section-head-text" style="{{#sectiondesigntextcolor}} {{sectiondesigntextcolor}} {{/sectiondesigntextcolor}}">
+                {{#singleheader}}
+                {{$ format_designer/courseformat/content/section/header }}
+                    {{> format_designer/courseformat/content/section/header }}
+                {{/ format_designer/courseformat/content/section/header }}
+                {{/singleheader}}
+                {{#header}}
+                {{$ format_designer/courseformat/content/section/header }}
+                    {{> format_designer/courseformat/content/section/header }}
+                {{/ format_designer/courseformat/content/section/header }}
+                {{/header}}
+            </div>
         {{/section.hidesectiontitle}}
         {{! End of section name }}
 
