@@ -75,5 +75,10 @@ function xmldb_format_designer_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2022020301, 'format', 'designer');
     }
 
+    if ($oldversion < 2022041700) {
+        $DB->set_field('course_format_options', 'name', 'designercoursetype', ['name' => 'designerdesignercoursetype']);
+        upgrade_plugin_savepoint(true, 2022041701, 'format', 'designer');
+    }
+
     return true;
 }
