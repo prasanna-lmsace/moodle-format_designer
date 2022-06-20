@@ -28,8 +28,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - php: '7.2'
-            moodle-branch: 'MOODLE_34_STABLE'
+          - php: '7.4'
+            moodle-branch: 'MOODLE_311_STABLE'
             database: 'mariadb'
           # - php: '7.4'
           #   moodle-branch: 'MOODLE_310_STABLE'
@@ -64,7 +64,7 @@ jobs:
         env:
           DB: ${{ matrix.database }}
           MOODLE_BRANCH: ${{ matrix.moodle-branch }}
-          IGNORE_NAMES: 'section_layout.mustache,module_layout_cards.mustache,module_layout_default.mustache,module_layout_list.mustache,section_layout_cards.mustache,section_layout_list.mustache,section_layout_default.mustache'
+          IGNORE_NAMES: 'action.js,section_layout.mustache,module_layout_cards.mustache,module_layout_default.mustache,module_layout_list.mustache,section_layout_cards.mustache,section_layout_list.mustache,section_layout_default.mustache,styles.css'
 
       - name: PHP Lint
         if: ${{ always() }}
