@@ -1113,7 +1113,7 @@ class format_designer_renderer extends format_section_renderer_base {
             'data-id' => $section->id,
             'style' => $style
         ]);
-		echo $sectionhead;
+        echo $sectionhead;
         echo $this->render_from_template($templatename, $templatecontext);
         echo html_writer::end_tag('li');
     }

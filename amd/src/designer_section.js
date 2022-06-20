@@ -37,14 +37,13 @@
         }
     });
 
-
     /**
      * Control designer format action
      * @param {int} courseId
      * @param {int} contextId
      * @param {bool} popupActivities
      */
-    let DesignerSection = function(courseId, contextId, popupActivities) {
+    var DesignerSection = function(courseId, contextId, popupActivities) {
         var self = this;
         self.courseId = courseId;
         self.contextId = contextId;
@@ -68,7 +67,7 @@
                 var sectionid = $(this).parents('li.section').attr('id');
                 var section = document.getElementById(sectionid);
                 var distance = section.offsetTop - document.body.scrollTop;
-                // setTimeout(() => window.scroll(0, distance), 50);
+                setTimeout(() => window.scroll(0, distance), 50);
             }).on('shown.bs.collapse', function() {
                 $(this).parents('li.section').removeClass('stack-header-collapsing');
             });
