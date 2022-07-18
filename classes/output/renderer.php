@@ -102,7 +102,6 @@ class renderer extends \core_courseformat\output\section_renderer {
         $data->startid = $startid;
 
         $data->timemanagement = $this->timemanagement_details($course);
-
         return $this->render_from_template('format_designer/courseformat/content/section', $data);
     }
 
@@ -115,7 +114,6 @@ class renderer extends \core_courseformat\output\section_renderer {
     public function render_title($widget) {
         global $CFG;
         $data = $widget->export_for_template($this);
-
         $data->elementstate = $this->get_activity_elementclasses($data->mod);
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");
@@ -827,11 +825,20 @@ class renderer extends \core_courseformat\output\section_renderer {
         // If there is content AND a link, then display the content here.
         // (AFTER any icons). Otherwise it was displayed before.
         $cmtext = '';
+        $videotime = $mod->modname == 'videotime';
+        $useactivityimage = '';
         if (format_designer_has_pro()) {
-            $useactivityimage = \format_designer\options::get_option($mod->id, 'useactivityimage');
-            $videotime = ($mod->modname == 'videotime' && $useactivityimage);
+            if ($mod->modname == 'videotime') {
+                if ($videorecord = $DB->get_record('videotime', array('id' => $mod->instance))) {
+                    if ($videorecord->label_mode == 2) {
+                        $useactivityimage = \format_designer\options::get_option($mod->id, 'useactivityimage');
+                    }
+                }
+            }
+            $useactivityimagestatus = ($videotime && $useactivityimage);
+            $enableactivityimage = \format_designer\options::get_option($mod->id, 'useactivityimage');
         }
-        if (!empty($url) || (isset($videotime) && $videotime)) {
+        if (!empty($url) || (isset($useactivityimagestatus) && $useactivityimagestatus)) {
             $cmtext = $mod->get_formatted_content(['overflowdiv' => true, 'noclean' => true]);
             if (isset($videotime) && $videotime) {
                 $videotime = $DB->get_record('videotime', ['id' => $mod->instance]);
@@ -857,7 +864,12 @@ class renderer extends \core_courseformat\output\section_renderer {
                     $modcontent = html_writer::tag('p', $cmtextcontent);
                 }
             }
+        } else {
+            $modcontent = $mod->get_formatted_content(
+                ['overflowdiv' => true, 'noclean' => true]
+            );
         }
+        //exit;
 
         $modvisits = $DB->count_records('logstore_standard_log', array('contextinstanceid' => $mod->id,
             'userid' => $USER->id, 'action' => 'viewed', 'target' => 'course_module'));
@@ -869,6 +881,9 @@ class renderer extends \core_courseformat\output\section_renderer {
         $activitylink = html_writer::empty_tag('img', array('src' => $mod->get_icon_url(),
                 'class' => 'iconlarge activityicon', 'alt' => '', 'role' => 'presentation', 'aria-hidden' => 'true'));
         if ($mod->uservisible) {
+            if (empty($url)) {
+                $url = $this->get_cmurl($mod);
+            }
             $modiconurl = html_writer::link($url, $activitylink, array('class' => 'mod-icon-url'));
         } else {
             $modiconurl = html_writer::start_div('mod-icon-url');
@@ -876,6 +891,23 @@ class renderer extends \core_courseformat\output\section_renderer {
             $modiconurl .= html_writer::end_div();
         }
 
+        $videotimeduration = '';
+        $durationformatted = '';
+        if ($mod->modname == 'videotime') {
+            $videoinstance = $DB->get_record('videotime', array('id' => $mod->instance));
+            if ($videoinstance) {
+                if ($video = $DB->get_record('videotime_vimeo_video', ['link' => $videoinstance->vimeo_url])) {
+                    $videotimeduration = $video->duration;
+                }
+            }
+        }
+        if ($videotimeduration) {
+            if ($videotimeduration >= 3600) {
+                $durationformatted = gmdate('H:i:s', $videotimeduration);
+            } else {
+                $durationformatted = gmdate('i:s', $videotimeduration);
+            }
+        }
         $cmlist = [
             'id' => 'module-' . $mod->id,
             'cm' => $mod,
@@ -891,13 +923,15 @@ class renderer extends \core_courseformat\output\section_renderer {
             'isrestricted' => !empty($mod->availableinfo),
             'modcontent' => isset($modcontent) ? $modcontent : '',
             'modcontentclass' => !empty($modcontent) ? 'ismodcontent' : '',
-            'modvisits' => ($mod->url) ? $modvisits : false,
+            'modvisits' => $this->get_cmurl($mod) ? $modvisits : false,
             'modiconurl' => $modiconurl,
             'modrestricted' => $modrestricted,
             'elementstate' => $this->get_activity_elementclasses($mod),
             'modstyle' => isset($modstyle) ? $modstyle : '',
+            'useactivityimage' => $useactivityimage,
+            'duration_formatted' => $durationformatted,
+            'enableactivityimage' => $enableactivityimage
         ];
-
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");
             $prodata = \local_designer\options::render_course_module($mod, $cmlist, $section);
