@@ -2620,10 +2620,10 @@ li.horizontal_circles .mod-visits-block {
     left: 0;
     z-index: -1;
 }
-.format-designer .course-content ul.course-type-flow.designer .section.main +
-.section.main.section-flow-none .section-header-content,
-.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none +
-.section.main.section-flow-none .section-header-content {
+.format-designer .course-content ul.course-type-flow.designer
+.section.main + .section.main.section-flow-none .section-header-content,
+.format-designer .course-content ul.course-type-flow.designer
+.section.main.section-flow-none + .section.main.section-flow-none .section-header-content {
     margin-right: 10px;
 }
 .format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none + .section.main

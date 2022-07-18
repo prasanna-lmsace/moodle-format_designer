@@ -1298,7 +1298,7 @@ class format_designer_renderer extends format_section_renderer_base {
             'modstyle' => isset($modstyle) ? $modstyle : '',
             'useactivityimage' => $useactivityimage,
             'duration_formatted' => $durationformatted,
-            'enableactivityimage' => $enableactivityimage,
+            'enableactivityimage' => isset($enableactivityimage) ? $enableactivityimage : false,
         ];
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");
