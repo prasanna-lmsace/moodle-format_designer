@@ -1429,7 +1429,7 @@ function format_designer_get_module_layoutclass($format, $section) {
     } else if ($sectiontype == 'cards') {
         $sectionlayoutclass = ' card ';
     }
-    
+
     if ($format->get_course()->coursetype == DESIGNER_TYPE_FLOW) {
         $sectionlayoutclass = 'card';
         $sectiontype = 'cards';

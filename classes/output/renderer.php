@@ -869,7 +869,6 @@ class renderer extends \core_courseformat\output\section_renderer {
                 ['overflowdiv' => true, 'noclean' => true]
             );
         }
-        //exit;
 
         $modvisits = $DB->count_records('logstore_standard_log', array('contextinstanceid' => $mod->id,
             'userid' => $USER->id, 'action' => 'viewed', 'target' => 'course_module'));
@@ -930,7 +929,7 @@ class renderer extends \core_courseformat\output\section_renderer {
             'modstyle' => isset($modstyle) ? $modstyle : '',
             'useactivityimage' => $useactivityimage,
             'duration_formatted' => $durationformatted,
-            'enableactivityimage' => $enableactivityimage
+            'enableactivityimage' => $enableactivityimage ?? false
         ];
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");
