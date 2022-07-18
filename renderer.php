@@ -1247,10 +1247,11 @@ class format_designer_renderer extends format_section_renderer_base {
                     }
                 }
             }
+            $enableactivityimage = ($options->useactivityimage) ? $options->useactivityimage : false;
         }
 
         $videotimeduration = '';
-        $duration_formatted = '';
+        $durationformatted = '';
         if ($mod->modname == 'videotime') {
             $videoinstance = $DB->get_record('videotime', array('id' => $mod->instance));
             if ($videoinstance) {
@@ -1261,9 +1262,9 @@ class format_designer_renderer extends format_section_renderer_base {
         }
         if ($videotimeduration) {
             if ($videotimeduration >= 3600) {
-                $duration_formatted = gmdate('H:i:s', $videotimeduration);
+                $durationformatted = gmdate('H:i:s', $videotimeduration);
             } else {
-                $duration_formatted = gmdate('i:s', $videotimeduration);
+                $durationformatted = gmdate('i:s', $videotimeduration);
             }
         }
 
@@ -1296,7 +1297,8 @@ class format_designer_renderer extends format_section_renderer_base {
             'elementstate' => $this->get_activity_elementclasses($mod),
             'modstyle' => isset($modstyle) ? $modstyle : '',
             'useactivityimage' => $useactivityimage,
-            'duration_formatted' => $duration_formatted
+            'duration_formatted' => $durationformatted,
+            'enableactivityimage' => $enableactivityimage,
         ];
         if (format_designer_has_pro()) {
             require_once($CFG->dirroot. "/local/designer/lib.php");
