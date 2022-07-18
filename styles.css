@@ -2553,7 +2553,7 @@ li.horizontal_circles .mod-visits-block {
     height: 100%;
     border-radius: 3px;
     background: #f0f0f0;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0;
     left: 0;
@@ -2565,7 +2565,7 @@ li.horizontal_circles .mod-visits-block {
     height: 100%;
     border-radius: 3px;
     background: #f9f9f9;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 5px;
     left: 5px;
@@ -2578,7 +2578,7 @@ li.horizontal_circles .mod-visits-block {
     height: 100%;
     border-radius: 3px;
     background: #f0f0f0;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 10px;
     left: 10px;
@@ -2597,14 +2597,16 @@ li.horizontal_circles .mod-visits-block {
     border-radius: 3px;
     z-index: 1;
 }
-.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed) .flow-stack-header,
-.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed) .section-background-color,
+.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed)
+.flow-stack-header,
+.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed)
+.section-background-color,
 .format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed)
 .section-background-style.sectiondesign-header {
     display: none;
 }
-.format-designer .course-content ul.designer .section.main.section-background-overlay .section-header-content.flow-stack:not(.collapsed)
-.section-background-style.sectiondesign-header {
+.format-designer .course-content ul.designer .section.main.section-background-overlay
+.section-header-content.flow-stack:not(.collapsed) .section-background-style.sectiondesign-header {
     display: block;
 }
 .format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-design-header.bg-mask
@@ -2618,9 +2620,10 @@ li.horizontal_circles .mod-visits-block {
     left: 0;
     z-index: -1;
 }
-.format-designer .course-content ul.course-type-flow.designer .section.main + .section.main.section-flow-none .section-header-content,
-.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none + .section.main.section-flow-none
-.section-header-content {
+.format-designer .course-content ul.course-type-flow.designer .section.main +
+.section.main.section-flow-none .section-header-content,
+.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none +
+.section.main.section-flow-none .section-header-content {
     margin-right: 10px;
 }
 .format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none + .section.main
