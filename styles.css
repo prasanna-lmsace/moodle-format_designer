@@ -882,7 +882,8 @@ ul li {
     width: 90%;
     display: inline-block;
 }
-.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance .inplaceeditable .activity-instance {
+.format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance
+.inplaceeditable .activity-instance {
     width: 100%;
 }
 .format-designer.editing .designer .section.img-text.circles-layout .activity .activityinstance
@@ -1448,7 +1449,7 @@ ul li {
 }
 .format-designer .designer .section .content .section.card-layout li.activity .action-html-card {
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 0;
     margin-top: 0;
     margin-left: 0;
@@ -1908,7 +1909,8 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     display: inline-block;
     margin-bottom: 10px;
 }
-.format-designer .designer .section.img-text.circles-layout .activity-block .activityinstance .activity-instance .activitytitle .img-element {
+.format-designer .designer .section.img-text.circles-layout .activity-block .activityinstance
+.activity-instance .activitytitle .img-element {
     display: none;
 }
 .format-designer .designer .section.img-text.circles-layout .activity-block .img-block {
@@ -2263,7 +2265,8 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     width: 50px;
     height: 50px;
 }
-.format-designer .designer .section.img-text.card-layout .activity.videotime.preview_mode .activity-block .img-element .bg-overlay .img-block {
+.format-designer .designer .section.img-text.card-layout .activity.videotime.preview_mode .activity-block
+.img-element .bg-overlay .img-block {
     width: 50px;
     height: 50px;
 }
@@ -2305,7 +2308,8 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .designer .section.img-text.card-layout .activity.videotime.label_mode .activity-block .completion-html-card {
     margin-left: 10px;
 }
-.format-designer .designer .section.img-text.card-layout .activity.videotime.label_mode .activity-block .completion-html-card .completion-html-card {
+.format-designer .designer .section.img-text.card-layout .activity.videotime.label_mode .activity-block
+.completion-html-card .completion-html-card {
     margin-left: 0;
 }
 .format-designer .designer .section .content .section.card-layout li.activity.label_mode .completion-html-card {
@@ -2555,32 +2559,40 @@ body.format-designer.editing .designer .section .content .section.card-layout li
 .format-designer .course-content ul.designer.course-type-flow .section.main .card-body .mod-indent-outer > div {
     display: block;
 }
-.format-designer .course-content ul.designer.course-type-flow .section.main .card-body .mod-indent-outer > div:last-child .contentwithoutlink {
+.format-designer .course-content ul.designer.course-type-flow .section.main .card-body
+.mod-indent-outer > div:last-child .contentwithoutlink {
     display: block;
 }
-.format-designer:not(.editing) .course-content ul.designer .section.main.section-header-image .section-header-content.flow-stack .flow-stack-header {
+.format-designer:not(.editing) .course-content ul.designer .section.main.section-header-image
+.section-header-content.flow-stack .flow-stack-header {
     top: 10px;
     left: 10px;
     z-index: -2;
 }
-.format-designer:not(.editing) .course-content ul.designer .section.main.section-header-image .section-header-content.flow-stack .section-background-color,
-.format-designer:not(.editing) .course-content ul.designer .section.main.section-background-color .section-header-content.flow-stack .section-background-color {
+.format-designer:not(.editing) .course-content ul.designer .section.main.section-header-image
+.section-header-content.flow-stack .section-background-color,
+.format-designer:not(.editing) .course-content ul.designer .section.main.section-background-color
+.section-header-content.flow-stack .section-background-color {
     top: 5px;
     left: 5px;
     z-index: -1;
 }
-.format-designer:not(.editing) .course-content ul.designer .section.main.section-header-image .section-header-content.flow-stack.bg-mask .section-background-color,
-.format-designer:not(.editing) .course-content ul.designer .section.main.section-background-color .section-header-content.flow-stack.bg-mask .section-background-color {
+.format-designer:not(.editing) .course-content ul.designer .section.main.section-header-image
+.section-header-content.flow-stack.bg-mask .section-background-color,
+.format-designer:not(.editing) .course-content ul.designer .section.main.section-background-color
+.section-header-content.flow-stack.bg-mask .section-background-color {
     top: 0;
     left: 0;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-overlay .section-header-content.flow-stack .flow-stack-header {
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-overlay
+.section-header-content.flow-stack .flow-stack-header {
     top: 10px;
     left: 10px;
     z-index: -2;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-overlay .section-header-content.flow-stack .section-background-style.sectiondesign-header {
-    top: 0;    
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-overlay
+.section-header-content.flow-stack .section-background-style.sectiondesign-header {
+    top: 0;
     left: 0;
     z-index: -1;
 }
@@ -2589,7 +2601,7 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     height: 100%;
     border-radius: 3px;
     background: #f0f0f0;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1 rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0;
     left: 0;
@@ -2601,19 +2613,20 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     height: 100%;
     border-radius: 3px;
     background: #f9f9f9;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1 rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 5px;
     left: 5px;
     z-index: -2;
     transition: all .5s ease;
 }
-.format-designer .course-content ul.designer li.section .section-header-content.flow-stack .section-background-style.sectiondesign-header {
+.format-designer .course-content ul.designer li.section .section-header-content.flow-stack
+.section-background-style.sectiondesign-header {
     width: 100%;
     height: 100%;
     border-radius: 3px;
     background: #f0f0f0;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1 rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 10px;
     left: 10px;
@@ -2632,28 +2645,38 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     border-radius: 3px;
     z-index: 1;
 }
-.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed) .flow-stack-header,
-.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed) .section-background-color,
-.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed) .section-background-style.sectiondesign-header {
+.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed)
+.flow-stack-header,
+.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed)
+.section-background-color,
+.format-designer .course-content ul.designer .section.main .section-header-content.flow-stack:not(.collapsed)
+.section-background-style.sectiondesign-header {
     display: none;
 }
-.format-designer .course-content ul.designer .section.main.section-background-overlay .section-header-content.flow-stack:not(.collapsed) .section-background-style.sectiondesign-header {
+.format-designer .course-content ul.designer .section.main.section-background-overlay
+.section-header-content.flow-stack:not(.collapsed) .section-background-style.sectiondesign-header {
     display: block;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-design-header.bg-mask .section-header-content.flow-stack .section-background-style.sectiondesign-header {
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-design-header.bg-mask
+.section-header-content.flow-stack .section-background-style.sectiondesign-header {
     z-index: -1;
 }
-.format-designer.editing .course-content ul.designer .section.main .section-header-content.flow-stack .section-background-color,
-.format-designer.editing .course-content ul.designer li.section .section-header-content.flow-stack .section-background-style.sectiondesign-header {
+.format-designer.editing .course-content ul.designer .section.main .section-header-content.flow-stack
+.section-background-color,
+.format-designer.editing .course-content ul.designer li.section .section-header-content.flow-stack
+.section-background-style.sectiondesign-header {
     top: 0;
     left: 0;
     z-index: -1;
 }
-.format-designer .course-content ul.course-type-flow.designer .section.main + .section.main.section-flow-none .section-header-content,
-.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none + .section.main.section-flow-none .section-header-content {
+.format-designer .course-content ul.course-type-flow.designer .section.main + .section.main.section-flow-none
+.section-header-content,
+.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none +
+.section.main.section-flow-none .section-header-content {
     margin-right: 10px;
 }
-.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none + .section.main .section-header-content.flow-stack {
+.format-designer .course-content ul.course-type-flow.designer .section.main.section-flow-none + .section.main
+.section-header-content.flow-stack {
     margin-right: 0;
 }
 .format-designer .course-content ul.course-type-flow.designer .section.main .section-header-content .section-collapse-icon {
@@ -2731,10 +2754,12 @@ body.format-designer.editing .designer .section .content .section.card-layout li
     height: 12px;
     background: #fff;
 }
-.format-designer .course-content ul.designer.course-type-flow li.section .section-header-content .section-progress-info .section-progress-completeted {
+.format-designer .course-content ul.designer.course-type-flow li.section .section-header-content .section-progress-info
+.section-progress-completeted {
     text-align: left;
 }
-.format-designer .course-content ul.designer.course-type-flow li.section .section-header-content .section-progress-info .section-progress-completeted span.badge-success {
+.format-designer .course-content ul.designer.course-type-flow li.section .section-header-content .section-progress-info
+.section-progress-completeted span.badge-success {
     font-size: 13px;
     padding: 5px 10px;
 }
@@ -2810,18 +2835,19 @@ div:not(.activity-background-style) + .mod-indent-outer .completion-html-card .c
 .format-designer ul.designer.course-type-flow.designer li.activity.videotime .card.card-list.notstarted {
     border-left: 0;
 }
-.format-designer:not(.editing) .course-content ul.designer .section.main.section-background-color .section-header-content.flow-stack .flow-stack-header {
+.format-designer:not(.editing) .course-content ul.designer .section.main.section-background-color
+.section-header-content.flow-stack .flow-stack-header {
     top: 10px;
     left: 10px;
     z-index: -2;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-color .section-header-content.flow-stack
-.section-background-color {
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-color
+.section-header-content.flow-stack .section-background-color {
     top: 0;
     left: 0;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-color .section-header-content.flow-stack
-.section-background-style.sectiondesign-header {
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.section-background-color
+.section-header-content.flow-stack .section-background-style.sectiondesign-header {
     background: #f9f9f9;
     top: 5px;
     left: 5px;
