@@ -2862,18 +2862,20 @@ div:not(.activity-background-style) + .mod-indent-outer .completion-html-card .c
 .section-header-content .bg-overlay {
     border-radius: 5px;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.main.section-background-color:not(.section-background-overlay)
-.section-header-content.collapsed .section-background-style.sectiondesign-header,
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.main.section-background-color:not(.section-header-image)
-.section-header-content.collapsed .section-background-style.sectiondesign-header {
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow
+li.section.main.section-background-color:not(.section-background-overlay) .section-header-content.collapsed
+.section-background-style.sectiondesign-header,
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow
+li.section.main.section-background-color:not(.section-header-image) .section-header-content.collapsed
+.section-background-style.sectiondesign-header {
     top: 5px;
     left: 5px;
     z-index: -2;
 }
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.main.section-background-color:not(.section-background-overlay)
-.section-header-content.collapsed .section-background-color,
-.format-designer:not(.editing) .course-content ul.designer.course-type-flow li.section.main.section-background-color:not(.section-header-image)
-.section-header-content.collapsed .section-background-color {
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow
+li.section.main.section-background-color:not(.section-background-overlay) .section-header-content.collapsed .section-background-color,
+.format-designer:not(.editing) .course-content ul.designer.course-type-flow
+li.section.main.section-background-color:not(.section-header-image) .section-header-content.collapsed .section-background-color {
     top: 0;
     left: 0;
 }
@@ -3006,3 +3008,4 @@ div:not(.activity-background-style) + .mod-indent-outer .completion-html-card .c
         transform: translate3d(0, 0, 0);
     }
 }
+2203
