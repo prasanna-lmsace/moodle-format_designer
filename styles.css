@@ -2376,35 +2376,41 @@ li.horizontal_circles .activityinstance .inplaceeditable .activity-instance {
     min-height: auto;
     text-align: left;
 }
-.format-designer .designer .section.desktop-one-column .content .section.horizontal-circles-layout li.activity .card .card-body
-.mod-indent-outer > div:last-child {
+.format-designer .designer .section.desktop-one-column .content .section.horizontal-circles-layout
+li.activity .card .card-body .mod-indent-outer > div:last-child {
     text-align: right;
 }
-.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
-.activityinstance .img-element {
+.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+li.horizontal_circles .activity-block .activityinstance .img-element {
     text-align: center;
     margin-bottom: 0;
 }
-.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance {
+.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+li.horizontal_circles .activity-block .activityinstance {
     width: auto;
     float: left;
 }
-.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance .mod-content {
+.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+li.horizontal_circles .activity-block .activityinstance .mod-content {
     margin-top: 5px;
 }
-.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+li.horizontal_circles .activity-block
 .activityinstance ~ .completion-html-card {
     display: inline-block;
     margin-top: 25px;
 }
-.format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout li.horizontal_circles .mod-visits-block,
-.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .action-html-card {
+.format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout
+li.horizontal_circles .mod-visits-block,
+.format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+li.horizontal_circles .activity-block .action-html-card {
     float: right;
     margin-top: 30px;
     margin-bottom: 0;
     position: static;
 }
-.format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout li.horizontal_circles .mod-visits-block {
+.format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout
+li.horizontal_circles .mod-visits-block {
     margin-top: 35px;
 }
 
@@ -2539,10 +2545,12 @@ li.horizontal_circles .mod-visits-block {
 }
 
 @media (min-width: 576px) and (max-width: 1199px) {
-    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
-    .activityinstance ~ .completion-html-card,
-    .format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout li.horizontal_circles .mod-visits-block,
-    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .action-html-card {
+    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .activity-block .activityinstance ~ .completion-html-card,
+    .format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .mod-visits-block,
+    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .activity-block .action-html-card {
         margin-left: 20px;
     }
 }
@@ -2550,16 +2558,19 @@ li.horizontal_circles .mod-visits-block {
 @media (min-width: 992px) and (max-width: 1366px) {
     .format-designer .designer .section.desktop-four-column .content .section.card-layout li.activity .mod-visits-block,
     .format-designer .designer .section.desktop-four-column .content .section.card-layout li.activity .action-html-card,
-    .format-designer .designer .section.desktop-four-column .section.img-text.card-layout li.activity.preview_mode .activity-block .mod-icon-url {
+    .format-designer .designer .section.desktop-four-column .section.img-text.card-layout
+    li.activity.preview_mode .activity-block .mod-icon-url {
         position: static;
     }
-    .format-designer .designer .section.desktop-four-column .content .section.card-layout li.activity.videotime .completion-html-card {
+    .format-designer .designer .section.desktop-four-column .content .section.card-layout
+    li.activity.videotime .completion-html-card {
         display: block;
     }
 }
 
 @media (min-width: 768px) {
-    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance {
+    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .activity-block .activityinstance {
         width: 50%;
     }
 }
@@ -2585,25 +2596,30 @@ li.horizontal_circles .mod-visits-block {
         position: static;
     }
     .format-designer .designer .section .content .section.img-text.card-layout li.activity .action-html-card,
-    .format-designer .designer .section.img-text.card-layout .activity.videotime.preview_mode .activity-block .badge.video-duration {
+    .format-designer .designer .section.img-text.card-layout .activity.videotime.preview_mode
+    .activity-block .badge.video-duration {
         float: right;
         position: static;
     }
     .format-designer .designer .section .content .section.card-layout li.activity .completion-html-card {
         display: block;
     }
-    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .activityinstance {
+    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .activity-block .activityinstance {
         width: 100%;
     }
-    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block
+    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .activity-block
     .activityinstance ~ .completion-html-card {
         margin-top: 0;
         display: inline-block;
         vertical-align: middle;
         margin-left: 15px;
     }
-    .format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout li.horizontal_circles .mod-visits-block,
-    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout li.horizontal_circles .activity-block .action-html-card {
+    .format-designer .designer .section.desktop-one-column .content .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .mod-visits-block,
+    .format-designer .designer .section.desktop-one-column .section.img-text.horizontal-circles-layout
+    li.horizontal_circles .activity-block .action-html-card {
         display: inline-block;
         vertical-align: middle;
         float: none;
@@ -2976,7 +2992,8 @@ li.section.main.section-background-color:not(.section-header-image) .section-hea
     z-index: -2;
 }
 .format-designer:not(.editing) .course-content ul.designer.course-type-flow
-li.section.main.section-background-color:not(.section-background-overlay) .section-header-content.collapsed .section-background-color,
+li.section.main.section-background-color:not(.section-background-overlay) .section-header-content.collapsed
+.section-background-color,
 .format-designer:not(.editing) .course-content ul.designer.course-type-flow
 li.section.main.section-background-color:not(.section-header-image) .section-header-content.collapsed .section-background-color {
     top: 0;
